@@ -1,5 +1,22 @@
+import { styled } from "styled-components";
+
+//COMPONENTS
+import Header from "./Header";
+import Center from "./Center";
+
+const Wrapper = styled.div`
+  height: 60%;
+  margin-top: 20px;
+  background-color: black;
+`;
+
 function Main() {
-  return <div>메인 구간 입니다.</div>;
+  return (
+    <Wrapper>
+      <Header />
+      <Center />
+    </Wrapper>
+  );
 }
 
 export default Main;

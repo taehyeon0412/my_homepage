@@ -1,7 +1,40 @@
+import styled from "styled-components";
 import "./App.css";
 
+//COMPONENTS
+import Main from "./components/Main";
+import Slider from "./components/Slider";
+
+const Wrapper = styled.div`
+  height: 90vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nanum Pen Script";
+
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 650px) {
+    width: 80vw;
+  }
+
+  @media (max-width: 650px) {
+    width: 90vw;
+  }
+`;
+
 function App() {
-  return <div>앱 처음화면입니다.</div>;
+  return (
+    <Wrapper>
+      <Main />
+      <Slider />
+    </Wrapper>
+  );
 }
 
 export default App;
