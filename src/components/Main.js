@@ -5,7 +5,7 @@ import Header from "./Header";
 import Center from "./Center";
 
 const Wrapper = styled.div`
-  height: 60%;
+  height: 70%;
   margin-top: 20px;
   background-color: black;
 `;
