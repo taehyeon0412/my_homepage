@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const Wrapper = styled.div`
   background-color: yellow;
-  height: 20%;
+  height: 10%;
 `;
 
 function Header() {

@@ -20,11 +20,11 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 650px) {
-    width: 80vw;
+    width: 900px;
   }
 
   @media (max-width: 650px) {
-    width: 90vw;
+    width: 80vw;
   }
 `;
 
