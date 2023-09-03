@@ -26,16 +26,45 @@ const MainIntroDiv = styled.div`
   height: 40%;
 
   p {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  i {
+    font-size: 5px;
+    color: rgba(128, 128, 128, 0.4);
+    margin-right: 10px;
+  }
 `;
 
-const MainIntroDivUp = styled(MainIntroDiv)``;
+const MainIntroDivUp = styled(MainIntroDiv)`
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+`;
 
-const MainIntroDivDn = styled(MainIntroDiv)``;
+const MainIntroDivDn = styled(MainIntroDiv)`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  p {
+    grid-column: span 2; //p는 두열을 사용하게함
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+`;
 
 //Center 왼쪽 div
 
@@ -81,7 +110,7 @@ const ProfileDnDiv = styled.div`
   width: 100%;
 `;
 
-const ProfileDnText = styled.p`
+const ProfileDnText = styled.div`
   display: flex;
   flex-direction: column;
   margin: 15px;
@@ -127,24 +156,42 @@ const PhotoDiv = styled.div`
 //Center 오른쪽 div
 
 function Center() {
+  const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "TypeScript",
+    "Git/Github",
+  ];
+
+  const intro = [
+    "차별화된 서비스를 만들어내는 개발자",
+    "꼼꼼하게 빈 틈을 채워나가는 개발자",
+    "사람들이 필요로 하는 것이 무엇인지 고민하는 개발자",
+  ];
+
   return (
     <Wrapper>
       <MainDiv>
         <MainIntroDivUp>
           <p>Web Developer</p>
-          <span>차별화된 서비스를 만들어내는 개발자</span>
-          <span>꼼꼼하게 빈 틈을 채워나가는 개발자</span>
-          <span>사람들이 필요로 하는 것이 무엇인지 고민하는 개발자</span>
+          {intro.map((intro, index) => (
+            <span key={index}>
+              <i className="fa-solid fa-circle fa-2xs"></i>
+              {intro}
+            </span>
+          ))}
         </MainIntroDivUp>
 
         <MainIntroDivDn>
           <p>Skills / Stacks 기술 스택</p>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>TypeScript</span>
-          <span>git/github</span>
+          {skills.map((skill, index) => (
+            <span key={index}>
+              <i className="fa-solid fa-circle fa-2xs"></i>
+              {skill}
+            </span>
+          ))}
         </MainIntroDivDn>
       </MainDiv>
 
