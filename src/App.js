@@ -3,7 +3,7 @@ import "./App.css";
 
 //COMPONENTS
 import Main from "./components/Main";
-import Slider from "./components/Slider";
+import Bottom from "./components/Bottom";
 
 const Wrapper = styled.div`
   height: 90vh;
@@ -32,7 +32,7 @@ function App() {
   return (
     <Wrapper>
       <Main />
-      <Slider />
+      <Bottom />
     </Wrapper>
   );
 }
